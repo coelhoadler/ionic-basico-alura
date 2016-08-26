@@ -20,28 +20,31 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+
+    <!-- Controller's -->
+    <script src="js/controller.js"></script>
+
+    <!--Service's -->
+    <script src="js/service.js"></script>
   </head>
-  <body ng-app="starter" class="platform-android platform-cordova platform-webview">
+  <body ng-app="starter" ng-controller="ListagemController" class="platform-android platform-cordova platform-webview">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Alura Car</h1>
-      </ion-header-bar>
-      <ion-content>
-        <ion-list>
-          <ion-item>BMW 120i </ion-item>
-          <ion-item>ONIX 1.6 </ion-item>
-          <ion-item>Fiesta 2.0 </ion-item>
-          <ion-item>C3 1.0 </ion-item>
-          <ion-item>Uno Fire </ion-item>
-          <ion-item>Sentra 2.0</ion-item>
-          <ion-item>Astra Sedan</ion-item>
-          <ion-item>Vectra 2.0 Turbo </ion-item>
-          <ion-item>Hilux 4x4</ion-item>
-          <ion-item>Montana Cabine dupls </ion-item>
 
-        </ion-list>
-      </ion-content>
+      <ion-nav-view>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button class="button-clear">
+                <i class="ion-arrow-left-c"></i> Voltar
+            </ion-nav-back-button>
+        </ion-nav-bar>
+      </ion-nav-view>
+
+      <!--footer-->
+      <ion-footer-bar align-title="center" class="bar-stable">
+        <h4 class="title">{{footer}}</h4>
+      </ion-footer-bar>
+
     </ion-pane>
   </body>
 </html>
